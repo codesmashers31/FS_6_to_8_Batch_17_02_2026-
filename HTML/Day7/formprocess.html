@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Process</title>
+</head>
+<body>
+    
+
+    <input type="text" onchange="hadnlechange()"  id="datas">
+    <p id="para"></p>
+   
+
+    <script>
+        
+   
+        const hadnlechange = ()=>{
+
+            const para = document.getElementById("para")
+            const datas = document.getElementById("datas").value
+            para.innerHTML = datas
+        }
+    </script>
+
+
+</body>
+</html>

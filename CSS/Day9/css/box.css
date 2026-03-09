@@ -1,0 +1,41 @@
+.box-model {
+
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 100px;
+  padding: 60px;
+  border: 10px solid blue;
+  margin:50px;
+  
+
+}
+
+
+.parent {
+    background-color: blue;
+}
+
+
+
+#two{
+    background-color: brown;
+}
+
+
+
+   h1{
+            background-color: chartreuse;
+        }
+
+
+           h1{
+            background-color: chartreuse;
+        }
+
+
+
+
+        h1{
+            background-color: aqua !important;
+        }

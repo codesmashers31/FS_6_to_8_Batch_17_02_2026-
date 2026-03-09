@@ -1,0 +1,51 @@
+/* syntex - selector {props:value} */
+
+body {
+    background-color: rgb(232, 83, 83);
+}
+
+
+h1 {
+    background-color: black;
+    color: aliceblue;
+    }
+
+
+
+.box {
+
+    background-color: blue;
+    color: aliceblue;
+
+}    
+
+
+#box{
+    background-color: brown;
+    color: white;
+}
+
+
+p, h3 {
+     
+       background-color: orange;
+       color: white;
+}
+
+h4 span {
+          background-color: rgb(42, 183, 2);
+       color: white;
+}
+
+
+input[type="text"] {
+
+     background-color: rgb(17, 79, 0);
+
+}
+
+input[type="number"] {
+
+    background-color: rgb(4, 152, 189);
+
+}
