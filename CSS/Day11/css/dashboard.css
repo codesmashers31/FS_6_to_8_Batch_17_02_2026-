@@ -1,0 +1,59 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.dashboard{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px auto 100px;
+    grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer"
+    ;
+
+    height: 100vh;
+}
+
+header {
+    grid-area:header;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+aside {
+    grid-area:sidebar ;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+main{
+    grid-area: main;
+    padding: 20px;
+}
+
+
+.cards{
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+
+}
+
+footer{
+  
+    background-color: black;
+    color: white;
+
+}
