@@ -1,0 +1,110 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.box{
+    background-color: black;
+    color: white;
+    padding: 10px;
+
+    margin: 10px;
+
+    width: 200px;
+
+    height: 200px;
+
+}
+
+
+.box:hover{
+    background-color: blueviolet;
+    color: black;
+    width: 20px;
+}
+
+
+
+.inputbox{
+
+    margin: 10px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+.inputbox:focus{
+    background-color: blue;
+    color: bisque;
+}
+
+
+.boxnew:first-child{
+
+    background-color: black;
+}
+
+
+
+
+
+.para{
+     
+    background-color: black;
+    color:white;
+
+    padding: 30px;
+
+}
+
+
+.para::after {
+    content: "This is also a content";
+    background-color: blue;
+    padding: 20px;
+}
+
+.para::first-letter {
+    
+    background-color: blue;
+    padding: 20px;
+}
+
+.heading{
+    background-color: aquamarine;
+    padding: 20px;
+}
+
+
+.heading::first-letter{
+    font-size: 50px;
+}
+
+.heading::after{
+    content: "😊";
+    background-color: rgb(13, 14, 13);
+    padding: 20px;
+}
+
+.buttonnew{
+    background-color: black;
+    margin: 20px; 
+    padding: 10px;
+    width: 150px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition: 2s
+}
+
+.buttonnew:hover{
+  
+background-color: red;
+   
+transform:  scale(1.2)
+
+}

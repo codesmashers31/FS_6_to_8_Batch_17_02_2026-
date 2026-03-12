@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("fonts/AmazonEmber-Regular.woff2") format("woff2"),
+       url("fonts/AmazonEmber-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.main{
+
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.logo{
+    margin-bottom: 0px;
+}
+
+.formdata{
+   
+ 
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding: 25px;
+    width: 350px;
+    border: rgb(227, 227, 227) solid 1px;
+    border-radius: 8px;
+    gap: 10px;
+ transition: 1.2s;
+    
+}
+
+/* .formdata:hover{
+    transform: rotate(360deg);
+} */
+
+.heading  {
+
+    font-size: 20px;
+
+}
+
+
+.lablenew{
+   
+    font-size: 14px;
+    font-weight: 700;
+
+}
+
+.inputbox{
+    width: 300px;
+    padding: 8px;
+    border-radius: 6px;
+
+    border:1px solid rgb(220, 220, 220);
+    
+}
+
+.inputbox:focus{
+    box-shadow: 0px 5px 5px rgb(199, 199, 213);
+}
+
+.buttonnew{
+    background-color: #ffd814;
+    padding: 8px;
+    width: 300px;
+    border-radius: 20px;
+    border: none;
+    transition: 1.2s;
+}
+
+.buttonnew:hover{
+    transform: scale(1.1);
+}
+
+.para{
+
+    font-size: 14px;
+}
