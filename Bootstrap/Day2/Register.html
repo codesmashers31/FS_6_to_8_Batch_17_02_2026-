@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="icon" href="assets/img/tnvote-logo.svg" type="image/svg+xml">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg border-bottom">
+      <div class="container py-2">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <span class="brand-mark">
+            <img src="assets/img/tnvote-logo.svg" alt="" width="24" height="24">
+          </span>
+          <span class="fw-semibold">TN Vote Info</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#tn-info">Tamil Nadu vote info</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#faq">FAQ</a></li>
+          </ul>
+          <div class="d-flex gap-2">
+            <a class="btn btn-outline-primary" href="Login.html">Login</a>
+            <a class="btn btn-primary" href="Register.html" aria-current="page">Register</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container auth-shell">
+    <div class="row w-100 justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-9">
+        <div class="card auth-card">
+          <div class="row g-0">
+            <div class="col-lg-5 auth-side p-4 p-lg-5">
+              <div class="d-flex align-items-center gap-2 mb-4">
+                <img src="assets/img/tnvote-logo.svg" alt="" width="36" height="36">
+                <div>
+                  <div class="fw-semibold">Create your account</div>
+                  <div class="small text-white-50">Quick registration</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="fw-semibold mb-2">Why register?</div>
+                <ul class="mb-0 text-white-50">
+                  <li>Save a personal checklist (demo)</li>
+                  <li>Faster access to TN info sections</li>
+                  <li>Better page navigation</li>
+                </ul>
+              </div>
+              <div class="mt-4 p-3 rounded-4 border border-white border-opacity-10" style="background: rgba(255,255,255,.06);">
+                <div class="small text-white-50">Already have an account?</div>
+                <a class="btn btn-outline-light mt-2 w-100" href="Login.html">Login</a>
+              </div>
+            </div>
+
+            <div class="col-lg-7 bg-white p-4 p-lg-5">
+              <h1 class="h3 fw-semibold mb-1">Register</h1>
+              <p class="text-secondary mb-4">Fill the form to create an account.</p>
+
+              <form class="row g-3" action="Login.html">
+                <div class="col-12 col-md-6">
+                  <label for="regName" class="form-label">Name</label>
+                  <input type="text" class="form-control form-control-lg" id="regName" placeholder="Your full name" required>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="regMobile" class="form-label">Mobile</label>
+                  <input type="tel" class="form-control form-control-lg" id="regMobile" placeholder="10-digit mobile number" inputmode="numeric" pattern="[0-9]{10}" required>
+                  <div class="form-text">Example: 9876543210</div>
+                </div>
+                <div class="col-12">
+                  <label for="regEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control form-control-lg" id="regEmail" placeholder="name@example.com" required>
+                </div>
+                <div class="col-12">
+                  <label for="regPassword" class="form-label">Password</label>
+                  <input type="password" class="form-control form-control-lg" id="regPassword" placeholder="Create a password" minlength="4" required>
+                </div>
+                <div class="col-12">
+                  <label for="regAddress" class="form-label">Address</label>
+                  <input type="text" class="form-control form-control-lg" id="regAddress" placeholder="Street, area">
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="regCity" class="form-label">City</label>
+                  <input type="text" class="form-control form-control-lg" id="regCity" placeholder="City">
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="regDistrict" class="form-label">District</label>
+                  <input type="text" class="form-control form-control-lg" id="regDistrict" placeholder="District">
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="terms" required>
+                    <label class="form-check-label" for="terms">
+                      I agree this is a demo project and not an official voting portal.
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-12 d-grid">
+                  <button type="submit" class="btn btn-primary btn-lg">Create account</button>
+                </div>
+                <div class="col-12">
+                  <div class="small text-secondary">
+                    Already registered? <a class="text-decoration-none" href="Login.html">Login</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-top">
+    <div class="container py-4 footer">
+      <div class="d-flex flex-wrap gap-3 justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-2">
+          <img src="assets/img/tnvote-logo.svg" alt="" width="28" height="28">
+          <span class="fw-semibold">TN Vote Info</span>
+        </div>
+        <div class="d-flex gap-3">
+          <a class="text-decoration-none" href="index.html">Home</a>
+          <a class="text-decoration-none" href="index.html#tn-info">TN info</a>
+          <a class="text-decoration-none" href="Login.html">Login</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
