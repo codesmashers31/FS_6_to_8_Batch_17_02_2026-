@@ -1,0 +1,63 @@
+<script>
+//  const name = "React"
+
+// function add (){
+//     console.log(name);
+// }
+
+
+// add()
+
+// if(name){
+//     console.log("true",name);
+// }else{
+//     console.log("false",name);
+// }
+
+
+// function Scope
+add()
+function add(){
+    // var a
+  console.log('inside if',a);
+    if(true){
+        var a = 100
+        console.log('inside if',a);
+    }
+    
+    console.log('outside if',a);
+
+}
+
+
+
+
+  
+  
+
+
+
+
+  function addnew(){
+    let a = 10
+   
+    function innerf (){
+        console.log(a);
+
+        function sub(){
+
+             console.log(a);
+
+        }
+sub()
+    }
+
+innerf()
+  }
+  
+
+  addnew()
+
+
+  
+</script>
