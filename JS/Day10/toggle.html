@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Toggle</title>
+</head>
+<body>
+    
+<button onclick="handleClick()">Click Me to Toggle</button>
+<div id="showing" style="display: none; background-color: black;color: white;
+padding: 10px;margin: 10px;border-radius: 10px;width: 50%;height: 30%;">
+    <h1>This is react Vite project. batter UI/UX</h1>
+</div>
+
+<script>
+
+ const handleClick= ()=>{
+
+
+    const show = document.getElementById("showing")
+   
+    console.log(show.style.display);
+    
+
+
+    if(show.style.display === "none"){
+        show.style.display="flex"
+  
+        
+    }
+    else if(show.style.display==="flex"){
+        show.style.display="none"
+      
+    }
+
+ }
+
+
+</script>
+</body>
+</html>
