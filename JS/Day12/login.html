@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    
+ <form id="formData">
+    <input type="text" placeholder="Enter the Name" id="username">
+    <input type="password" placeholder="Enter the password" id="userpassword">
+    <button id="loginBtn">Register</button>
+  </form>
+
+
+
+
+  <script>
+
+   
+  
+  const loginBtn = document.getElementById("loginBtn")
+
+  loginBtn.addEventListener("click",(e)=>{
+
+   const name =     document.getElementById("username").value
+   const userpassword =   document.getElementById("userpassword").value
+   const formData = document.getElementById("formData")
+   e.preventDefault()
+
+    let users = JSON.parse(localStorage.getItem("register")) || []
+     
+    //console.log(users);
+
+    const findUser = users.find((e)=>e.name===name && e.userpassword===userpassword)
+    if(findUser){
+        window.location.href = "dashboard.html"
+    }else{
+        alert("wrong user try correct records")
+    }
+
+  })
+
+  </script>
+
+</body>
+</html>

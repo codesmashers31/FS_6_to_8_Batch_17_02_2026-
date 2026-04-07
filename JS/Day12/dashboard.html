@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+</head>
+<body>
+    
+    <h1>Users List</h1>
+
+    <ul id="listing"></ul>
+
+    <button onclick="removeLocal()">Remove Loacl</button>
+
+
+ <script>
+   document.addEventListener("DOMContentLoaded",()=>{
+     const list = document.getElementById("listing")
+      let users = JSON.parse(localStorage.getItem("register")) || []
+       
+      list.innerHTML = "";
+
+      users.forEach((e)=>{
+        const li = document.createElement("li")
+        // <li>
+        li.textContent = e.name
+        list.append(li)
+      });
+
+
+    
+   })
+
+   const removeLocal = ()=>{
+       
+     localStorage.removeItem("register")
+     window.location.href = "form.html"
+
+   }
+ </script>   
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    
+  <form id="formData">
+    <input type="text" placeholder="Enter the Name" id="username">
+    <input type="password" placeholder="Enter the password" id="userpassword">
+    <button id="registerBtn">Register</button>
+  </form>
+
+
+
+
+  <script>
+
+   
+  
+  const registerBtn = document.getElementById("registerBtn")
+
+  registerBtn.addEventListener("click",(e)=>{
+
+   const name =     document.getElementById("username").value
+   const userpassword =   document.getElementById("userpassword").value
+   const formData = document.getElementById("formData")
+   e.preventDefault()
+
+    let users = JSON.parse(localStorage.getItem("register")) || []
+     
+    const datas = {name,userpassword}
+
+    users.push(datas)
+
+    //console.log(users);
+    const chnagedata = JSON.stringify(users)
+
+    console.log(chnagedata);
+    
+    localStorage.setItem("register",chnagedata)
+
+    alert("Successfully Added your data")
+    formData.reset()
+
+  })
+
+  </script>
+
+</body>
+</html>
