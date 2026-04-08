@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Fetch</title>
+</head>
+<body>
+    
+<table border="1">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+        </tr>
+    </thead>
+    <tbody id="datas">
+
+    </tbody>
+</table>
+
+
+</body>
+</html>
+
+<script>
+//  const fetchData = (cb)=>{
+
+//   setTimeout(()=>{
+//     console.log('Dat Fetched');
+//     cb()
+//   },2000)
+
+
+//  }
+      
+//  const processData = ()=>{
+//     console.log('Processing the data');
+    
+//  }  
+    
+// fetchData(processData)
+
+    
+// const step1 = ()=>{
+//     return new Promise((resolve,reject)=>{
+//     let success = true
+
+//     if(success){
+//         resolve("Data Fetched 1")
+//     }else{
+//         reject("Error Happened")
+//     }
+// })
+// }
+
+// const step2 = ()=>{
+//     return new Promise((resolve,reject)=>{
+//     let success = true
+
+//     if(success){
+//         resolve("Data Fetched 2")
+//     }else{
+//         reject("Error Happened")
+//     }
+// })
+// }
+
+// step1((res)=>{
+
+//     console.log(res);
+    
+
+// }).then((res)=>{console.log(res);
+// }).catch((error)=>{console.log(error);
+
+// })
+
+// const running = ()=>{
+//     setTimeout(()=>{
+//      console.log('Ruuninf');
+     
+//     },3000)
+// }
+
+// const dataFetch = async()=>{
+  
+//     await running()
+//     await console.log('Step 1');
+    
+    
+
+
+// }
+
+// dataFetch()
+
+
+
+
+const fetchData = async ()=>{
+
+   const datasget = await fetch("https://dummyjson.com/products")
+   const res = await datasget.json()
+   const save = res.products
+   let tablebody = document.getElementById("datas")
+   tablebody.innerHTML = ""
+
+
+save.forEach((user,i)=>{
+    let row = `
+    <tr>
+        <td>${i+1}</td>
+        <td>${user.category}<td>
+    </tr>
+    `
+
+    tablebody.innerHTML += row 
+});
+
+  
+}
+
+fetchData()
+
+
+
+</script>

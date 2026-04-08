@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+</head>
+<body>
+    
+    
+<form id="formdata">
+    <p id="error"></p>
+    <input type="text" placeholder="Enter the Name" id="userName">
+    <input type="tel" placeholder="Enter the Mobile" id="userMobile">
+    <input type="text" placeholder="Enter the Course" id="userCourse">
+    <button id="adding">Add the Work</button>
+</form>
+
+<div>
+    <table border="1">
+        <thead>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Course</th>
+        </thead>
+        <tbody id="showing">
+
+        </tbody>
+    </table>
+</div>
+
+
+
+<script>
+
+
+const loading = ()=>{
+
+    
+
+     const getData = localStorage.getItem("todo")
+     const changedata = JSON.parse(getData)
+     
+     const show = document.getElementById("showing")
+
+    show.innerHTML = ""
+
+
+    changedata.forEach((e)=>{
+
+         const row = `<tr>
+        
+        <td>${e.username}</td>
+        <td>${e.usermobile}</td>
+        <td>${e.usercourse}</td>
+        
+        
+        </tr>`
+
+        show.innerHTML += row
+
+    })
+
+   
+
+     
+
+
+
+
+}
+
+ loading()
+
+  const btn = document.getElementById("adding")
+
+  btn.addEventListener("click",(e)=>{
+
+    e.preventDefault()
+
+    const username = document.getElementById("userName").value
+    const usermobile = document.getElementById("userMobile").value
+    const usercourse = document.getElementById("userCourse").value
+
+
+
+    if(!username || !usermobile || !usercourse){
+        document.getElementById("error").innerText = "Please fill the form"
+        document.getElementById("error").style.color = "red"
+        // alert('Please Fill the form')
+        return
+    }
+
+    if(usermobile.length !== 10){
+        alert('Enter The 10 Digit Mobile Number')
+        return
+    }
+    
+
+
+    const newData = localStorage.getItem("todo")
+    const dataAdding = JSON.parse(newData) || []
+    const usersData = {username,usermobile,usercourse}
+     dataAdding.push(usersData)
+    localStorage.setItem("todo",JSON.stringify(dataAdding))
+
+    // console.log(changeData);
+    
+   
+
+    
+
+    
+
+    alert("Succfully Task Added")
+
+    document.getElementById("formdata").reset()
+
+    loading()
+
+
+  })
+
+
+
+</script>
+
+</body>
+</html>
