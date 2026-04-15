@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+</head>
+<body>
+    
+<div>
+    <h1 id="heading">Welcome!!</h1>
+    <p id="email">Email:</p>
+
+
+    <button onclick="logout()">Logout</button>
+</div>
+
+<script>
+    const getDatas = ()=>{
+
+      const get = JSON.parse(localStorage.getItem("userData"))
+      const statusnew =  JSON.parse(localStorage.getItem("isActive"))
+     //console.log(statusnew);
+     
+    const heading = document.getElementById("heading")
+    const email = document.getElementById("email")
+   console.log(statusnew?.status);
+   
+    if(statusnew){
+        heading.innerHTML += get.name
+        email.innerHTML += get.email
+        return
+    }else{
+        alert('Valida users only so go and login')
+        window.location.href = "login.html"
+    }
+
+
+    }
+
+
+
+    const logout = ()=>{
+
+   localStorage.removeItem("userData")
+   localStorage.removeItem("isActive")
+  window.location.href = "login.html"
+
+    }
+
+
+    getDatas()
+</script>
+
+</body>
+</html>
