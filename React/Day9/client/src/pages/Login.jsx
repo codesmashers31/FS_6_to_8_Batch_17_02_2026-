@@ -26,9 +26,13 @@ const handleSubmit = (e)=>{
         //alert("Successfully Register")
 
         //console.log(dataSave);
+
+
+
+    const datas = dataSave.find((e)=>e.email===formData.email)    
         
 
-        if(dataSave.email === formData.email){
+        if(datas){
 
                setFormData({email:""})
                navigate("/dashbaord")
