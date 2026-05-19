@@ -1,0 +1,146 @@
+<!-- <div id="step1">
+ <h1>Personal Details</h1>
+    <form>
+       
+        <input type="text" placeholder="Enter the Name"  id="username">
+        <input type="text" placeholder="Enter the mobile"  id="mobile">
+        <input type="text" placeholder="Enter the city"  id="city">
+        <button id="clickstep1">Next Step</button>
+    </form>
+
+</div>
+
+<div id="step2" style="display: none;">
+ <h1>Education Details</h1>
+    <form>
+       
+        <input type="text" placeholder="Enter the Name"  id="username">
+        <input type="text" placeholder="Enter the mobile"  id="mobile">
+        <input type="text" placeholder="Enter the city"  id="city">
+        <button id="pre">Pre Step</button>
+        <button id="final">Submit</button>
+    </form>
+
+</div>
+
+
+<script>
+    const step1 = document.getElementById("step1")
+    const step2 =document.getElementById("step2")
+    const next = document.getElementById("clickstep1")
+    const pre = document.getElementById("pre")
+    const final = document.getElementById("final")
+
+    next.addEventListener("click",(e)=>{
+        e.preventDefault()
+         step2.style.display = "block"
+         step1.style.display = "none"
+    })
+
+    pre.addEventListener("click",()=>{
+         step2.style.display = "none"
+         step1.style.display = "block"
+    })colspan="2"
+    final.addEventListener("click",()=>{
+         
+        alert("Fom Submited")
+    })
+
+</script> -->
+
+
+
+<!-- 
+
+<table border="2">
+    <thead>
+        <tr>
+            <th rowspan="2">Day</th>
+            <th >Session</th>
+        </tr>
+
+        <tr>
+            <th>Morning</th>
+            <th>Evening</th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+        <tr>
+            <td>Monday</td>
+            <td colspan="2">HTML</td>
+            
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>HTML</td>
+            <td>CSS</td>
+        </tr>
+    </tbody>
+
+</table> -->
+
+<form>
+    <input type="email" required>
+    <input type="name" required>
+    <input type="mobile" required pattern="[0-10]{10}">
+    <input type="submit" value="Register">
+</form>
+
+
+<video controls>
+  <source src="video.nsgs" type="mp3" />
+</video>
+
+
+
+<iframe src="http://map.api/" frameborder="0"  allowfullscreen></iframe>
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+fdgfdgg
+        </div>
+
+        <div class="col-8">
+gfgfg
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<script>
+    
+
+const FormRegister = ()=>{
+
+  const [fromdata,setFromData] = useState("")
+     const handleclick  = (e)=>{
+
+        setFromData(e.target.value)
+
+    }
+
+return(<>
+
+<form>
+<input   />   
+</form>
+
+</>)
+
+
+}
+
+
+
+export default FormRegister;
+</script>
